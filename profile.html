@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Settings | FlowPilot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="./css/output.css" rel="stylesheet">
+  <script>
+    if (localStorage.getItem("flowpilot-theme") === "dark") document.documentElement.classList.add("dark");
+  </script>
+  <script src="./js/theme.js" defer></script>
+  <script src="./js/profile.js" defer></script>
+</head>
+<body>
+  <header class="border-b border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
+    <nav class="container-page flex min-h-20 items-center justify-between gap-4">
+      <a href="index.html" class="text-2xl font-extrabold text-brand-600">FlowPilot.</a>
+      <div class="flex items-center gap-2">
+        <a href="index.html" class="nav-link hidden sm:inline-block">Home</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="pricing.html" class="nav-link hidden sm:inline-block">Pricing</a>
+        <button data-theme-toggle class="rounded-xl border border-slate-200 px-3 py-2 dark:border-slate-700" aria-label="Switch theme"><span data-theme-icon>🌙</span></button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container-page max-w-5xl py-12">
+    <div class="mb-8">
+      <h1 class="text-3xl font-extrabold">Profile Settings</h1>
+      <p class="mt-2 text-slate-500">Manage your personal information and account preferences.</p>
+    </div>
+
+    <form id="profileForm" class="card p-6 sm:p-8">
+      <div class="flex flex-wrap items-center gap-5 border-b border-slate-200 pb-7 dark:border-slate-800">
+        <img src="https://i.pravatar.cc/120?img=12" alt="Profile portrait" class="h-24 w-24 rounded-full object-cover">
+        <div>
+          <h2 class="text-xl font-bold">Bilal Majid</h2>
+          <p class="mt-1 text-sm text-slate-500">Administrator</p>
+          <label for="profileImage" class="mt-3 inline-block cursor-pointer text-sm font-semibold text-brand-600">Change profile image</label>
+          <input id="profileImage" type="file" accept="image/*" class="mt-2 block max-w-full text-sm text-slate-500">
+        </div>
+      </div>
+
+      <section class="mt-8">
+        <h2 class="text-lg font-bold">Personal Information</h2>
+        <div class="mt-5 grid gap-5 sm:grid-cols-2">
+          <div>
+            <label for="fullName" class="mb-2 block text-sm font-semibold">Full Name</label>
+            <input id="fullName" class="field" type="text" value="Bilal Majid" required>
+          </div>
+          <div>
+            <label for="email" class="mb-2 block text-sm font-semibold">Email Address</label>
+            <input id="email" class="field" type="email" value="bilal@example.com" required>
+          </div>
+          <div>
+            <label for="phone" class="mb-2 block text-sm font-semibold">Phone Number</label>
+            <input id="phone" class="field" type="tel" value="+92 300 1234567">
+          </div>
+          <div>
+            <label for="jobTitle" class="mb-2 block text-sm font-semibold">Job Title</label>
+            <input id="jobTitle" class="field" type="text" value="Software Engineer">
+          </div>
+        </div>
+      </section>
+
+      <div class="mt-8 border-t border-slate-200 pt-8 dark:border-slate-800">
+        <h2 class="text-lg font-bold">Change Password</h2>
+        <div class="mt-5 grid gap-5 sm:grid-cols-2">
+          <div>
+            <label for="newPassword" class="mb-2 block text-sm font-semibold">New Password</label>
+            <input id="newPassword" class="field" type="password" minlength="8" autocomplete="new-password" placeholder="Enter new password">
+          </div>
+          <div>
+            <label for="confirmPassword" class="mb-2 block text-sm font-semibold">Confirm Password</label>
+            <input id="confirmPassword" class="field" type="password" minlength="8" autocomplete="new-password" placeholder="Confirm new password">
+          </div>
+        </div>
+        <p class="mt-3 text-xs text-slate-500">Demo only: do not enter a real password. Password changes are not connected to a backend.</p>
+      </div>
+
+      <div class="mt-8 border-t border-slate-200 pt-8 dark:border-slate-800">
+        <h2 class="text-lg font-bold">Notification Preferences</h2>
+        <div class="mt-5 space-y-4">
+          <label class="flex items-center justify-between gap-4 text-sm">
+            <span>Email notifications</span>
+            <input id="emailNotifications" type="checkbox" class="h-5 w-5 accent-indigo-600" checked>
+          </label>
+          <label class="flex items-center justify-between gap-4 text-sm">
+            <span>Project updates</span>
+            <input id="projectNotifications" type="checkbox" class="h-5 w-5 accent-indigo-600" checked>
+          </label>
+          <label class="flex items-center justify-between gap-4 text-sm">
+            <span>Weekly activity summary</span>
+            <input id="weeklyNotifications" type="checkbox" class="h-5 w-5 accent-indigo-600">
+          </label>
+        </div>
+      </div>
+
+      <div class="mt-8 flex flex-wrap items-center gap-3 border-t border-slate-200 pt-8 dark:border-slate-800">
+        <button type="submit" class="btn-primary">Save Changes</button>
+        <button type="reset" class="btn-secondary">Reset Form</button>
+      </div>
+      <p id="profileMessage" class="mt-4 text-sm" role="status" aria-live="polite"></p>
+    </form>
+
+    <footer class="py-8 text-center text-sm text-slate-500">
+      © <span data-current-year></span> FlowPilot. All rights reserved.
+    </footer>
+  </main>
+</body>
+</html>

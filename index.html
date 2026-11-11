@@ -1,0 +1,245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FlowPilot helps teams manage projects, tasks and productivity.">
+  <title>FlowPilot | Manage Work Smarter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="./css/output.css" rel="stylesheet">
+  <script>
+    if (localStorage.getItem("flowpilot-theme") === "dark") {
+      document.documentElement.classList.add("dark");
+    }
+  </script>
+  <script src="./js/theme.js" defer></script>
+  <script src="./js/main.js" defer></script>
+</head>
+<body>
+  <header class="border-b border-slate-200 bg-white dark:border-slate-800 dark:bg-slate-900">
+    <nav class="container-page flex min-h-20 items-center justify-between gap-4">
+      <a href="index.html" class="text-2xl font-extrabold text-brand-600">FlowPilot.</a>
+
+      <div class="hidden items-center gap-2 md:flex">
+        <a class="nav-link" href="#features">Features</a>
+        <a class="nav-link" href="#testimonials">Testimonials</a>
+        <a class="nav-link" href="#pricing">Pricing</a>
+        <a class="nav-link" href="dashboard.html">Dashboard</a>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button data-theme-toggle class="rounded-xl border border-slate-200 px-3 py-2 dark:border-slate-700" aria-label="Switch theme">
+          <span data-theme-icon>🌙</span>
+        </button>
+        <a href="dashboard.html" class="btn-primary hidden sm:inline-flex">Get Started</a>
+        <button data-menu-button class="rounded-xl border border-slate-200 px-3 py-2 md:hidden dark:border-slate-700" aria-expanded="false" aria-label="Toggle navigation">
+          ☰
+        </button>
+      </div>
+    </nav>
+
+    <div data-mobile-menu class="container-page hidden pb-4 md:hidden">
+      <a class="nav-link block" href="#features">Features</a>
+      <a class="nav-link block" href="#testimonials">Testimonials</a>
+      <a class="nav-link block" href="#pricing">Pricing</a>
+      <a class="nav-link block" href="dashboard.html">Dashboard</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="container-page grid items-center gap-12 py-20 md:grid-cols-2 md:py-28">
+      <div>
+        <span class="badge bg-brand-100 text-brand-700 dark:bg-brand-950 dark:text-brand-300">Work smarter, not harder</span>
+        <h1 class="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl">
+          Manage projects. <span class="text-brand-600">Achieve more.</span>
+        </h1>
+        <p class="mt-6 max-w-xl leading-8 text-slate-600 dark:text-slate-300">
+          FlowPilot brings your projects, tasks and team activities together in one simple workspace. Stay organized and keep every project moving.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="dashboard.html" class="btn-primary">Explore Dashboard</a>
+          <a href="#features" class="btn-secondary">Explore Features</a>
+        </div>
+        <p class="mt-5 text-sm text-slate-500 dark:text-slate-400">Simple project management for growing teams.</p>
+      </div>
+
+      <div class="card bg-gradient-to-br from-brand-50 to-white p-6 dark:from-slate-900 dark:to-slate-800 sm:p-8">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="text-sm text-slate-500 dark:text-slate-400">Project overview</p>
+            <h2 class="mt-1 text-xl font-bold">Website Redesign</h2>
+          </div>
+          <span class="badge badge-green">On track</span>
+        </div>
+        <div class="mt-8 grid grid-cols-2 gap-4">
+          <div class="rounded-xl bg-white p-4 dark:bg-slate-900">
+            <p class="text-sm text-slate-500">Tasks completed</p>
+            <p class="mt-2 text-3xl font-bold">24</p>
+          </div>
+          <div class="rounded-xl bg-white p-4 dark:bg-slate-900">
+            <p class="text-sm text-slate-500">Team members</p>
+            <p class="mt-2 text-3xl font-bold">08</p>
+          </div>
+        </div>
+        <div class="mt-6">
+          <div class="mb-2 flex justify-between text-sm">
+            <span class="font-medium">Project progress</span>
+            <span class="font-bold text-brand-600">75%</span>
+          </div>
+          <div class="h-3 overflow-hidden rounded-full bg-slate-200 dark:bg-slate-700">
+            <div class="h-full w-3/4 rounded-full bg-brand-600"></div>
+          </div>
+        </div>
+        <div class="mt-6 space-y-3">
+          <div class="flex items-center justify-between rounded-xl bg-white p-3 dark:bg-slate-900">
+            <span class="text-sm">Design homepage</span>
+            <span class="badge badge-green">Completed</span>
+          </div>
+          <div class="flex items-center justify-between rounded-xl bg-white p-3 dark:bg-slate-900">
+            <span class="text-sm">Develop dashboard</span>
+            <span class="badge badge-yellow">In progress</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="bg-white py-20 dark:bg-slate-900">
+      <div class="container-page">
+        <div class="mx-auto max-w-2xl text-center">
+          <h2 class="section-title">Everything your team needs</h2>
+          <p class="mt-4 text-slate-600 dark:text-slate-300">Manage your workflow with tools designed to keep your work organized.</p>
+        </div>
+
+        <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="card p-6">
+            <div class="text-3xl">📊</div>
+            <h3 class="mt-4 text-lg font-bold">Project Analytics</h3>
+            <p class="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">Understand project progress through clear statistics and reports.</p>
+          </article>
+          <article class="card p-6">
+            <div class="text-3xl">✅</div>
+            <h3 class="mt-4 text-lg font-bold">Task Management</h3>
+            <p class="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">Organize tasks, deadlines and priorities in one place.</p>
+          </article>
+          <article class="card p-6">
+            <div class="text-3xl">👥</div>
+            <h3 class="mt-4 text-lg font-bold">Team Collaboration</h3>
+            <p class="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">Keep team members connected and informed about project updates.</p>
+          </article>
+          <article class="card p-6">
+            <div class="text-3xl">🔔</div>
+            <h3 class="mt-4 text-lg font-bold">Activity Updates</h3>
+            <p class="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">Follow recent activities and never miss important changes.</p>
+          </article>
+          <article class="card p-6">
+            <div class="text-3xl">🔒</div>
+            <h3 class="mt-4 text-lg font-bold">Account Settings</h3>
+            <p class="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">Manage your personal profile and notification preferences.</p>
+          </article>
+          <article class="card p-6">
+            <div class="text-3xl">💳</div>
+            <h3 class="mt-4 text-lg font-bold">Flexible Pricing</h3>
+            <p class="mt-2 text-sm leading-7 text-slate-600 dark:text-slate-300">Choose a plan that fits your team and its requirements.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="container-page py-20">
+      <div class="text-center">
+        <h2 class="section-title">What our customers say</h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-300">A simpler workflow makes a difference.</p>
+      </div>
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        <article class="card p-6">
+          <p class="leading-7 text-slate-600 dark:text-slate-300">"FlowPilot helps our team keep projects organized and track deadlines."</p>
+          <h3 class="mt-5 font-bold">Sarah Ahmed</h3>
+          <p class="text-sm text-slate-500">Project Manager</p>
+        </article>
+        <article class="card p-6">
+          <p class="leading-7 text-slate-600 dark:text-slate-300">"The dashboard gives us a clear picture of our team's daily progress."</p>
+          <h3 class="mt-5 font-bold">Usman Khan</h3>
+          <p class="text-sm text-slate-500">Software Developer</p>
+        </article>
+        <article class="card p-6">
+          <p class="leading-7 text-slate-600 dark:text-slate-300">"It is easy to use and keeps our project information in one place."</p>
+          <h3 class="mt-5 font-bold">Ayesha Malik</h3>
+          <p class="text-sm text-slate-500">Team Lead</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="pricing" class="bg-white py-20 dark:bg-slate-900">
+      <div class="container-page text-center">
+        <h2 class="section-title">Plans for every team</h2>
+        <p class="mt-4 text-slate-600 dark:text-slate-300">Start small and upgrade as your team grows.</p>
+        <div class="mt-8 grid gap-6 text-left md:grid-cols-3">
+          <article class="card p-6">
+            <h3 class="text-xl font-bold">Starter</h3>
+            <p class="mt-3 text-3xl font-extrabold">$0 <span class="text-sm font-normal text-slate-500">/ month</span></p>
+            <p class="mt-3 text-sm text-slate-500">For individuals getting started.</p>
+            <a href="pricing.html" class="btn-secondary mt-6 w-full">View Plan</a>
+          </article>
+          <article class="card border-brand-500 p-6">
+            <span class="badge bg-brand-100 text-brand-700 dark:bg-brand-950 dark:text-brand-300">Recommended</span>
+            <h3 class="mt-4 text-xl font-bold">Professional</h3>
+            <p class="mt-3 text-3xl font-extrabold">$19 <span class="text-sm font-normal text-slate-500">/ month</span></p>
+            <p class="mt-3 text-sm text-slate-500">For growing teams and businesses.</p>
+            <a href="pricing.html" class="btn-primary mt-6 w-full">View Plan</a>
+          </article>
+          <article class="card p-6">
+            <h3 class="text-xl font-bold">Enterprise</h3>
+            <p class="mt-3 text-3xl font-extrabold">$49 <span class="text-sm font-normal text-slate-500">/ month</span></p>
+            <p class="mt-3 text-sm text-slate-500">For larger organizations.</p>
+            <a href="pricing.html" class="btn-secondary mt-6 w-full">View Plan</a>
+          </article>
+        </div>
+        <a href="pricing.html" class="mt-8 inline-block font-semibold text-brand-600 hover:text-brand-700">Compare all plans →</a>
+      </div>
+    </section>
+
+    <section class="container-page py-20">
+      <div class="mx-auto max-w-3xl">
+        <h2 class="section-title text-center">Frequently asked questions</h2>
+        <div class="mt-10 space-y-4">
+          <div class="card p-5">
+            <button data-faq-button class="flex w-full items-center justify-between text-left font-semibold" aria-expanded="false">
+              What is FlowPilot?
+              <span>+</span>
+            </button>
+            <p class="mt-3 hidden text-sm leading-7 text-slate-600 dark:text-slate-300">FlowPilot is a project management platform concept that helps teams organize projects, tasks and activities.</p>
+          </div>
+          <div class="card p-5">
+            <button data-faq-button class="flex w-full items-center justify-between text-left font-semibold" aria-expanded="false">
+              Can I change my pricing plan?
+              <span>+</span>
+            </button>
+            <p class="mt-3 hidden text-sm leading-7 text-slate-600 dark:text-slate-300">You can choose a different plan from the pricing page. This demo does not process real payments.</p>
+          </div>
+          <div class="card p-5">
+            <button data-faq-button class="flex w-full items-center justify-between text-left font-semibold" aria-expanded="false">
+              Does FlowPilot support dark mode?
+              <span>+</span>
+            </button>
+            <p class="mt-3 hidden text-sm leading-7 text-slate-600 dark:text-slate-300">Yes. Use the theme button in the navigation bar to switch between light and dark modes.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white py-8 dark:border-slate-800 dark:bg-slate-900">
+    <div class="container-page flex flex-col items-center justify-between gap-4 text-sm text-slate-500 sm:flex-row">
+      <p>© <span data-current-year></span> FlowPilot. All rights reserved.</p>
+      <div class="flex gap-5">
+        <a href="pricing.html" class="hover:text-brand-600">Pricing</a>
+        <a href="dashboard.html" class="hover:text-brand-600">Dashboard</a>
+        <a href="profile.html" class="hover:text-brand-600">Profile</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
